@@ -1,0 +1,58 @@
+<meta charset="UTF-8">
+
+<canvas width="800" height="500">  </canvas>
+
+Selecione a Cor:  <input type="color">
+
+<script>
+
+    var tela = document.querySelector("canvas");
+    var paleta = document.querySelector("input");
+    var pincel = tela.getContext("2d");
+
+    // Backgroud
+    pincel.fillStyle = "purple";
+    pincel.fillRect(0, 0, 800, 500);
+
+    var desenha = false;
+
+    
+    tela.onmousemove = function(evento) 
+    {
+        if (desenha) 
+        {
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            var raio = 10;
+            
+            if (evento.shiftKey && evento.altKey) 
+            {
+                alert("Aperte 1 botão apenas, por favor!!")
+            }
+            else if (evento.shiftKey && raio + 10 <= 40) 
+            {
+                raio = raio + 10;
+            }
+            else if (evento.altKey && raio - 5 >= 10) 
+            {
+                raio = raio - 5;
+            }
+
+            pincel.fillStyle = paleta.value;
+            pincel.beginPath();
+            pincel.arc(x, y, raio, 0, 2 * 3.14);
+            pincel.fill();
+        }
+    }
+
+    tela.onmousedown = function() 
+    {
+        desenha = true;
+    }
+
+    tela.onmouseup = function() 
+    {
+        desenha = false;
+    }
+
+</script>

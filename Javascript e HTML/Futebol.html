@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+    // Funções
+    function pulaumalinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaumalinha();
+    }
+
+    var vitorias = parseInt(prompt("Entre com o número de Vitórias: "));
+    var empates = parseInt(prompt("Entre com o número de Empates: "));
+
+    var pontos = (vitorias * 3) + empates;
+
+    mostra("Os pontos do seu time é " + pontos);
+    pulaumalinha();
+
+    if (pontos > 28)
+        mostra("Seu time está MELHOR que ano passado!");
+
+    if (pontos < 28)
+        mostra("Seu time está PIOR que ano passado!");
+
+    if (pontos == 28)
+        mostra("Seu time está IGUAL que ano passado!");
+
+
+</script>

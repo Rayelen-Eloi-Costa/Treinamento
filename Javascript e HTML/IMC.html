@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+
+    // Funções
+    function pulaumalinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaumalinha();
+    }
+
+    function calcularImc (peso, altura) {
+        return peso / (altura * altura);
+    }
+
+    document.write("<h2> IMC MANUALMENTE </h2>");
+    var imcRay = calcularImc(60, 1.61);
+    var imcIsa = calcularImc(71, 1.55);
+
+    mostra(Math.round(imcRay));
+    mostra(Math.round(imcIsa));
+    pulaumalinha();
+
+    var totalImc = calcularImc(60, 1.61) + calcularImc(71, 1.55);
+    document.write("A soma dos IMC's é " + Math.round(totalImc));
+
+    document.write("<h2> IMC INTERAGINDO COM USUÁRIO </h2>");
+    var nome = prompt("Informe seu nome: ")
+    var pesoInformada = prompt("Informe o seu peso: ");
+    var alturaInformada = prompt("Informe sua altura: ");
+    var imc = calcularImc(pesoInformada, alturaInformada);
+
+    document.write("O IMC da " + nome + " calculado é " + Math.round(imc));
+
+</script>

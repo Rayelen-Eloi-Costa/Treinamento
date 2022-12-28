@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+
+    // Funções
+    function pulaumalinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaumalinha();
+    }
+
+    mostra ("<h2> Média da Familia </h2>")
+
+    var totalFamiliares = parseInt(prompt("Infome a Quantidade de Familiares: "));
+
+    index = 1;
+
+    var totalIdades = 0;
+
+    while (index <= totalFamiliares) {
+        var idade = parseInt(prompt("Informe a Idade do " + index + "º Familiar: "));
+        toralIdades = totalIdades + idade;
+        index++;
+
+    }
+
+    var mediaDasIdades = toralIdades/totalFamiliares;
+    mostra("A média das idades dos familiares é " + mediaDasIdades);
+
+
+</script>

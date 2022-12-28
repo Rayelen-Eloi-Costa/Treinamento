@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+
+<script>
+    /* Tudo que eu escrever dentro da tag scripit o computador entende que é JavaScript*/
+    alert("Primeira instrução JavaScript que aprendi!");
+
+    /* Funções */
+    function pulaumalinha() {
+        document.write("<br>");
+    }
+
+    document.write("<h2> Concatenação e Operações Matemáticas </h2>");
+    document.write("A idade do Flávio é <br> 18 anos.");
+    pulaumalinha();
+    document.write("A idade do Flávio é " + (2016 - 39));
+    pulaumalinha();
+    document.write(" Melan" + "cia");
+    document.write("<br> <br>");
+
+    document.write("<h2> Variáveis </h2>");
+    var ano = 2022;
+    document.write("Marina tem " + (ano - 1977) + " anos.");
+    pulaumalinha();
+    document.write("João tem " + (ano - 1981) + " anos.");
+    pulaumalinha();
+    document.write("Marcela tem " + (ano - 2003) + " anos.");
+    pulaumalinha();
+
+    var media = (45 + 41 + 19)/3;
+    document.write("A média das idades é " + media);
+
+    document.write("<h4> Arrendondar Valores </h4>");
+    var media = (39 + 20 + 41)/3;
+    document.write("A média das idades é " + Math.round(media));
+
+    document.write("<h2> Simplificando o Código com Funções com Parâmetros </h2>");
+    function mostra(frase) {
+        
+        document.write(frase);
+        pulaumalinha();
+
+    }
+
+    var ano = 2023;
+
+    mostra ();
+    mostra("Marina tem " + (ano - 1977) + " anos.");
+    mostra("João tem " + (ano - 1981) + " anos.");
+    mostra("Marcela tem " + (ano - 2003) + " anos.");
+
+
+    
+
+
+
+</script>

@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+    // Funções
+    function pulaumalinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaumalinha();
+    }
+
+    mostra ("<h2> Tabuada </h2>")
+
+    var multiplicador = parseInt(prompt("Qual tabuada deseja saber: "));
+
+    for (let index = 0; index <= 10; index++) {
+        mostra (multiplicador + " X " + index + " = " + (index * multiplicador));
+    }
+
+</script>

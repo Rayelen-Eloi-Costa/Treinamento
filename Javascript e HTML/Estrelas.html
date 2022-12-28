@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+    // Funções
+    function pulaumalinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+    }
+
+    var usuarioLinha = parseInt(prompt("Informe o numero de Linhas: "))
+    var usuarioColuna = parseInt(prompt("Informe o numero de Estrelas: "))
+
+
+    for (let linha = 1; linha <= usuarioLinha; linha++) {
+        
+        for (let coluna = 1; coluna <= usuarioColuna; coluna++) {
+            mostra("*");
+        }
+        
+        pulaumalinha();
+    }
+
+</script>

@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+
+    // Funções
+    function pulaumalinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaumalinha();
+    }
+
+    var anoCopa = 1930;
+    var limite = parseInt(prompt("Entre com a Data Limite: "))
+
+    while (anoCopa <= limite) {
+        alert("Teve Copa em " + anoCopa);
+        anoCopa = anoCopa + 4;
+    }
+
+</script>
