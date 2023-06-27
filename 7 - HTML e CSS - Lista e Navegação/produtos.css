@@ -1,0 +1,96 @@
+header {
+    background: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa {
+    /* Centraliza o Menu */
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute; /*Ele traz o elemento para frente dos objetos/tags*/
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline; /*Coloca os itens um do lado do Outro*/
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase; /*Coloca os itens em Maiusculo*/
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none; /*Sem decoração no texto, exemplo sublinhado*/
+}
+
+nav a:hover {
+    /* Quando passar o mouse por cima dos menus, realizar essas ações. */
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
+    display: inline-block; /* Deve serguir a largura que definirmos e os itens deve ficar um do lado do outro */
+    text-align: center;
+    width: 30%; /* Cada intens vai ocupar 30% da tela */
+    vertical-align: top;
+    margin: 0 1.5%; /* Adiciona espaçamento de 1,5% entre as Caixas dos Itens */
+    padding: 30px 20px; /* Espaçamento entre os itens */
+    box-sizing: border-box; /* Faz o CSS enteder que é para considerar o espaçamento que definimos. */
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color: #C78C19;
+}
+
+.produtos li:active {
+    border-color: #088C19;    
+}
+
+.produtos li:hover h2 {
+    /* Quando passar o mouse por cima, mudar o tamanho da fonte. */
+    font-size: 34px;
+}
+
+.produtos h2 {
+    /* Titulo dos Itens*/
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    /* Descrição dos Itens*/
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background: url("img/bg.jpg"); /* Usar como fundo uma imagem. */
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}

@@ -1,0 +1,65 @@
+<canvas width="700" height="500"></canvas>
+
+Selecione a Cor:  <input type="color">
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    var paleta = document.querySelector("input");
+
+    // Backgroud
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 700, 500);
+
+    
+    function desenhaCirculo(x, y, raio, cor) 
+    {
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function desenhaCoracao(x, y, raio, cor) 
+    {
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.moveTo(75,40);
+        pincel.bezierCurveTo(75,37,70,25,50,25);
+        pincel.bezierCurveTo(20,25,20,62.5,20,62.5);
+        pincel.bezierCurveTo(20,80,40,102,75,120);
+        pincel.bezierCurveTo(110,102,130,80,130,62.5);
+        pincel.bezierCurveTo(130,62.5,130,25,100,25);
+        pincel.bezierCurveTo(85,25,75,37,75,40);
+        pincel.fill();
+    }
+
+    function limpaTela() 
+    {
+        pincel.clearRect(0, 0, 700, 500);
+    }
+
+    var raio = 19;
+    var fatorCrescimento = 0;
+
+    function atualizarTela() 
+    {
+        limpaTela();
+
+        if (raio > 30) 
+        {
+            fatorCrescimento = -1;
+        }
+        else if (raio < 20) 
+        {
+            fatorCrescimento = 1;    
+        }
+
+        raio = raio + fatorCrescimento;
+        desenhaCirculo(300, 200, raio, paleta.value);
+    }
+
+    setInterval(atualizarTela, 20);
+
+</script>
